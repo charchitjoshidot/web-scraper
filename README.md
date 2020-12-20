@@ -1,3 +1,7 @@
+# Tech Stack Used
+    Back-End: Spring Boot
+    Front-End: Angular 10
+    Database: H2 Database Engine (In Memory Database)
 # Tech Versions 
     java v11
     npm v7.0.15
