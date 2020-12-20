@@ -1,0 +1,27 @@
+.card {
+    background-color: #d4d4d4;
+}
+
+.card-body {
+    padding: .50rem 1.25rem;
+}
+
+.card-title{
+    margin-bottom: 0px;
+}
+
+.event-card {
+    padding: 10px;
+}
+.card-date, .card-location {
+    display: flex;
+}
+.card-text {
+    margin-left: 5px;
+}
+.card-f {
+    margin-top: 5px;;
+}
+.material-icons {
+    font-size: 20px;
+}

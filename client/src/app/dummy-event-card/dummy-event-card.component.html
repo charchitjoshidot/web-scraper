@@ -1,0 +1,20 @@
+<div class="event-card">
+    <div class="card">
+        <div class="card-body">
+            <h3 class="card-title"><b>{{eventName}}</b></h3>
+            <div class="card-date">
+                <span class="material-icons">today</span>
+                <p class="card-text">{{eventDate | date : 'medium'}}</p>
+            </div>
+            <div class="card-location">
+                <span class="material-icons">
+                    location_on
+                </span>
+                <p class="card-text">{{eventLocation}}</p>
+            </div>
+            <div class="card-f">
+                <i>Source: {{websiteName}} </i>
+            </div>
+        </div>
+    </div>
+</div>

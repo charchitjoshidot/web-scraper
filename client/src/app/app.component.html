@@ -1,0 +1,34 @@
+<nav class="navbar navbar-bg">
+    <a class="navbar-brand" href="#">
+        <img src="/assets/images/logo.png" width="50" height="50" class="d-inline-block align-top"
+            alt="logo">
+        <p class="brand-name">Galen Data</p>
+    </a>
+</nav>
+<div class="container" *ngIf="!loading">
+    <div class="filter-box">
+        <div class="bar" >
+            <input name="searchbar" class="searchbar" type="text" title="Search" (input)="onChangeSearch($event.target.value)" placeholder="Search by Event Name or Location">
+        </div>
+        <div class="sort-box">
+            <label class="lable">Sort By: </label>
+            <select name="sort" class="custom-select" (change)="onChangeSortType($event.target.value)">
+                <option [value]="0">Select</option>
+                <option [value]="1">Date</option>
+                <option [value]="2">Event Name</option>
+                <option [value]="3">Location</option>
+            </select>
+        </div>
+    </div>
+    <div class="event-box" >
+        <div *ngFor="let event of events" >
+            <app-dummy-event-card 
+                [eventName]="event.eventName"
+                [eventDate]="event.eventDate"
+                [eventLocation]="event.eventLocation"
+                [websiteName]="event.sourceName">
+            </app-dummy-event-card>
+        </div>
+    </div>
+</div>
+<div class="loader" *ngIf="loading" ></div>
